@@ -28,3 +28,5 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Landing page content (contact, WhatsApp messages, modalities) lives in src/config/site.ts; components in src/components/landing read from it so business data changes in one place.
