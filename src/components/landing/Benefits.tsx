@@ -12,7 +12,7 @@ export function Benefits() {
   return (
     <section className="bg-surface py-24 md:py-32">
       <div className="container mx-auto px-5">
-        <SectionTitle eyebrow="Por que a Milenium" title={<>Feita para quem <span className="text-gradient-gold">não para</span></>} />
+        <SectionTitle eyebrow="Por que a Milenium" title={<>Feita para quem <span className="text-gradient-light">não para</span></>} />
         <div className="grid gap-px overflow-hidden rounded-sm bg-border sm:grid-cols-2 lg:grid-cols-4">
           {items.map((b, i) => (
             <Reveal key={b.title} delay={i * 100} className="group h-full bg-surface p-8 transition-colors hover:bg-card">

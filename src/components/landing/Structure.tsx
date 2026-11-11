@@ -17,7 +17,7 @@ export function Structure() {
   return (
     <section id="estrutura" className="bg-surface py-24 md:py-32">
       <div className="container mx-auto px-5">
-        <SectionTitle eyebrow="Estrutura" title={<>Espaço para <span className="text-gradient-gold">evoluir</span></>} text="Imagens ilustrativas. Em breve, fotos reais da nossa estrutura e equipamentos." />
+        <SectionTitle eyebrow="Estrutura" title={<>Espaço para <span className="text-gradient-light">evoluir</span></>} text="Imagens ilustrativas. Em breve, fotos reais da nossa estrutura e equipamentos." />
         <div className="grid auto-rows-[220px] gap-3 md:grid-cols-4">
           {photos.map((p, i) => (
             <Reveal key={i} delay={i * 100} className={cn("group relative overflow-hidden rounded-sm", p.cls)}>

@@ -7,7 +7,7 @@ export function Location() {
   return (
     <section id="localizacao" className="py-24 md:py-32">
       <div className="container mx-auto px-5">
-        <SectionTitle eyebrow="Localização" title={<>Venha nos <span className="text-gradient-gold">visitar</span></>} />
+        <SectionTitle eyebrow="Localização" title={<>Venha nos <span className="text-gradient-light">visitar</span></>} />
         <div className="grid gap-6 lg:grid-cols-3">
           <Reveal className="overflow-hidden rounded-sm border border-border lg:col-span-2">
             <iframe title="Mapa da Academia Milenium em Maringá" src={site.mapsEmbed} loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="h-[360px] w-full grayscale-[60%] md:h-[440px]" />

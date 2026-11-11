@@ -13,7 +13,7 @@ export function About() {
         </Reveal>
         <Reveal delay={150}>
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-primary">Sobre nós</p>
-          <h2 className="text-5xl md:text-6xl">Academia Milenium, <span className="text-gradient-gold">em Maringá</span></h2>
+          <h2 className="text-5xl md:text-6xl">Academia Milenium, <span className="text-gradient-light">em Maringá</span></h2>
           <p className="mt-6 text-muted-foreground">
             A Academia Milenium é um espaço dedicado a quem quer evoluir. Aqui você encontra um ambiente para treinar com foco,
             constância e motivação — seja para começar agora ou para ir além dos seus limites.

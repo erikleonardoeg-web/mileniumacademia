@@ -12,7 +12,7 @@ export function Testimonials() {
   return (
     <section className="bg-surface py-24 md:py-32">
       <div className="container mx-auto px-5">
-        <SectionTitle eyebrow="Depoimentos" title={<>Quem treina, <span className="text-gradient-gold">recomenda</span></>} />
+        <SectionTitle eyebrow="Depoimentos" title={<>Quem treina, <span className="text-gradient-light">recomenda</span></>} />
         <p className="-mt-8 mb-10 text-center text-xs uppercase tracking-wider text-muted-foreground">Conteúdo demonstrativo — depoimentos reais em breve</p>
         <div className="grid gap-4 md:grid-cols-3">
           {items.map((t, i) => (

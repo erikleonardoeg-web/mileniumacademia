@@ -8,7 +8,7 @@ export function Modalities() {
   return (
     <section id="modalidades" className="py-24 md:py-32">
       <div className="container mx-auto px-5">
-        <SectionTitle eyebrow="Modalidades" title={<>Encontre o seu <span className="text-gradient-gold">treino</span></>} />
+        <SectionTitle eyebrow="Modalidades" title={<>Encontre o seu <span className="text-gradient-light">treino</span></>} />
         {items.length > 0 ? (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((m, i) => (
