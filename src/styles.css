@@ -102,6 +102,8 @@
   --whatsapp: oklch(0.72 0.17 150);
   --gradient-light: linear-gradient(135deg, oklch(0.98 0.002 250), oklch(0.78 0.012 260));
   --gradient-fade: linear-gradient(180deg, oklch(0.145 0.012 260 / 0.22), oklch(0.145 0.012 260 / 0.68) 58%, oklch(0.145 0.012 260));
+  --gradient-hero: linear-gradient(90deg, oklch(0.145 0.012 260 / 0.95) 0%, oklch(0.145 0.012 260 / 0.82) 30%, oklch(0.145 0.012 260 / 0.40) 58%, oklch(0.145 0.012 260 / 0.08) 84%, oklch(0.145 0.012 260 / 0) 100%), linear-gradient(0deg, oklch(0.145 0.012 260) 0%, oklch(0.145 0.012 260 / 0.88) 16%, oklch(0.145 0.012 260 / 0.55) 38%, oklch(0.145 0.012 260 / 0.18) 62%, oklch(0.145 0.012 260 / 0) 84%);
+  --gradient-hero-sm: linear-gradient(180deg, oklch(0.145 0.012 260 / 0.35) 0%, oklch(0.145 0.012 260 / 0.55) 25%, oklch(0.145 0.012 260 / 0.80) 45%, oklch(0.145 0.012 260 / 0.95) 65%, oklch(0.145 0.012 260) 85%);
   --shadow-light: 0 10px 40px -12px oklch(0.96 0.003 250 / 0.2);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -171,6 +173,8 @@
 }
 @utility bg-gradient-light { background-image: var(--gradient-light); }
 @utility bg-gradient-fade { background-image: var(--gradient-fade); }
+@utility bg-gradient-hero { background-image: var(--gradient-hero); }
+@utility bg-gradient-hero-sm { background-image: var(--gradient-hero-sm); }
 @utility text-gradient-light { background-image: var(--gradient-light); -webkit-background-clip: text; background-clip: text; color: transparent; }
 @utility shadow-light { box-shadow: var(--shadow-light); }
 @utility bg-whatsapp { background-color: var(--whatsapp); }

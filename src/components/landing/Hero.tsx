@@ -7,7 +7,8 @@ export function Hero() {
   return (
     <section id="inicio" className="relative flex min-h-[100svh] items-end overflow-hidden pb-20 pt-28 md:items-center">
       <img src={heroAsset.url} alt="Fachada da Academia Milenium em Maringá" width={1599} height={984} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover object-center" />
-      <div className="absolute inset-0 bg-gradient-fade" />
+      <div className="absolute inset-0 bg-gradient-hero-sm md:hidden" />
+      <div className="absolute inset-0 hidden bg-gradient-hero md:block" />
       <div className="container relative mx-auto px-5">
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-primary animate-in fade-in slide-in-from-bottom-4 duration-700">Academia em {site.city} – {site.state}</p>
         <h1 className="max-w-3xl text-7xl sm:text-8xl lg:text-[9rem] animate-in fade-in slide-in-from-bottom-6 duration-1000">
