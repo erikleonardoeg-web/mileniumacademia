@@ -1,5 +1,5 @@
 import { ChevronDown } from "lucide-react";
-import heroAsset from "@/assets/fachada-academia-milenium.png.asset.json";
+import heroAsset from "@/assets/fachada-academia-milenium-nova.jpg.asset.json";
 import { WaButton } from "./WaButton";
 import { site } from "@/config/site";
 
@@ -14,7 +14,7 @@ export function Hero() {
         <h1 className="max-w-3xl text-7xl sm:text-8xl lg:text-[9rem] animate-in fade-in slide-in-from-bottom-6 duration-1000">
           Seu melhor <br /><span className="text-gradient-light">está por vir.</span>
         </h1>
-        <p className="mt-6 max-w-md text-lg text-muted-foreground animate-in fade-in duration-1000">
+        <p className="mt-6 max-w-md text-lg text-foreground/80 animate-in fade-in duration-1000">
           Dê o primeiro passo hoje. Fale com a equipe da Academia Milenium e descubra o plano ideal para você.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
