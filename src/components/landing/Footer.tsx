@@ -1,12 +1,19 @@
 import { Instagram, MapPin, MessageCircle } from "lucide-react";
 import { site, waMsg } from "@/config/site";
+import logoAsset from "@/assets/logo-milenium.png.asset.json";
 
 export function Footer() {
   return (
     <footer className="border-t border-border bg-surface pb-24 pt-16 md:pb-10">
       <div className="container mx-auto grid gap-10 px-5 md:grid-cols-3">
         <div>
-          <p className="font-display text-3xl tracking-wider">MILENIUM<span className="text-primary">.</span></p>
+          <img
+            src={logoAsset.url}
+            alt="Academia Milenium"
+            width={908}
+            height={176}
+            className="h-8 w-auto"
+          />
           <p className="mt-3 text-sm text-muted-foreground">Academia em {site.city} – {site.state}. Seu melhor está por vir.</p>
         </div>
         <nav aria-label="Rodapé" className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">

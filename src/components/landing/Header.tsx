@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { WaButton } from "./WaButton";
 import { cn } from "@/lib/utils";
+import logoAsset from "@/assets/logo-milenium.png.asset.json";
 
 const links = [
   ["Sobre", "#sobre"], ["Estrutura", "#estrutura"], ["Modalidades", "#modalidades"],
@@ -19,9 +20,14 @@ export function Header() {
   return (
     <header className={cn("fixed inset-x-0 top-0 z-50 transition-all", scrolled || open ? "border-b border-border bg-background/90 backdrop-blur-md" : "bg-transparent")}>
       <div className="container mx-auto flex h-16 items-center justify-between px-5 md:h-20">
-        {/* Logotipo provisório em texto — substitua pelo logo oficial */}
-        <a href="#inicio" className="font-display text-2xl tracking-wider md:text-3xl" aria-label="Academia Milenium - início">
-          MILENIUM<span className="text-primary">.</span>
+        <a href="#inicio" className="flex items-center" aria-label="Academia Milenium - início">
+          <img
+            src={logoAsset.url}
+            alt="Academia Milenium"
+            width={908}
+            height={176}
+            className="h-7 w-auto md:h-8"
+          />
         </a>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Principal">
           {links.map(([l, h]) => <a key={h} href={h} className="text-sm uppercase tracking-wider text-muted-foreground transition-colors hover:text-primary">{l}</a>)}
