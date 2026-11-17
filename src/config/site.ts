@@ -16,6 +16,21 @@ export const site = {
   },
   // Modalidades: preencha com as modalidades reais oferecidas pela academia.
   modalities: [] as { name: string; description: string }[],
+  // Depoimentos reais de alunos, enviados pelo proprietário em 17/11/2026. Texto preservado como recebido.
+  testimonials: [
+    {
+      text: "Excelente ambiente muito bom agradável pessoas educadas e o proprietário é muito atencioso.",
+      name: "Aluno(a) da Milenium",
+    },
+    {
+      text: "Aparelhos funcionando perfeitamente diversos a escolha e orientação perfeita para qualquer tipo de exercício que convém e se é indicado para cada uma pessoa com o modo e intensidade de uso.",
+      name: "Aluno(a) da Milenium",
+    },
+    {
+      text: "Atendimento muito bom e os profissionais acompanham nosso treino. Recomendo a qualquer um",
+      name: "Aluno(a) da Milenium",
+    },
+  ] as { text: string; name: string }[],
 } as const;
 
 export type MessageKey = keyof typeof site.messages;
