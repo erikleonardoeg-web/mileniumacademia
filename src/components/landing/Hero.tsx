@@ -1,12 +1,12 @@
 import { ChevronDown } from "lucide-react";
-import heroAsset from "@/assets/fachada-academia-milenium-nova.jpg.asset.json";
+import heroImg from "@/assets/fachada-academia-milenium-nova.jpg";
 import { WaButton } from "./WaButton";
 import { site } from "@/config/site";
 
 export function Hero() {
   return (
     <section id="inicio" className="relative flex min-h-[100svh] items-end overflow-hidden pb-20 pt-28 md:items-center">
-      <img src={heroAsset.url} alt="Fachada da Academia Milenium em Maringá" width={1599} height={984} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover object-center" />
+      <img src={heroImg} alt="Fachada da Academia Milenium em Maringá" width={1599} height={984} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover object-center" />
       <div className="absolute inset-0 bg-gradient-hero-sm md:hidden" />
       <div className="absolute inset-0 hidden bg-gradient-hero md:block" />
       <div className="container relative mx-auto px-5">

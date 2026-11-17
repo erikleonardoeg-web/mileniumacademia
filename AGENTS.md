@@ -30,3 +30,5 @@ use the editor.
 <!-- LOVABLE:END -->
 
 - Landing page content (contact, WhatsApp messages, modalities) lives in src/config/site.ts; components in src/components/landing read from it so business data changes in one place.
+
+- Images the landing page shows are bundled files in src/assets (not .asset.json CDN pointers), because /__l5e/ URLs only resolve on Lovable hosting and 404 on Vercel.

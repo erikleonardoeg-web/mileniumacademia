@@ -1,6 +1,6 @@
 import { Instagram, MapPin, MessageCircle } from "lucide-react";
 import { site, waMsg } from "@/config/site";
-import logoAsset from "@/assets/logo-milenium.png.asset.json";
+import logoImg from "@/assets/logo-milenium.png";
 
 export function Footer() {
   return (
@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container mx-auto grid gap-10 px-5 md:grid-cols-3">
         <div>
           <img
-            src={logoAsset.url}
+            src={logoImg}
             alt="Academia Milenium"
             width={908}
             height={176}

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { WaButton } from "./WaButton";
 import { cn } from "@/lib/utils";
-import logoAsset from "@/assets/logo-milenium.png.asset.json";
+import logoImg from "@/assets/logo-milenium.png";
 
 const links = [
   ["Sobre", "#sobre"], ["Estrutura", "#estrutura"], ["Modalidades", "#modalidades"],
@@ -22,7 +22,7 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-5 md:h-20">
         <a href="#inicio" className="flex items-center" aria-label="Academia Milenium - início">
           <img
-            src={logoAsset.url}
+            src={logoImg}
             alt="Academia Milenium"
             width={908}
             height={176}
