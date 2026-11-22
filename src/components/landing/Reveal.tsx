@@ -5,7 +5,7 @@ type RevealProps = {
   children: ReactNode;
   className?: string;
   delay?: number;
-  variant?: "up" | "left" | "right" | "scale";
+  variant?: "up" | "left" | "right" | "scale" | "wipe";
 };
 
 export function Reveal({ children, className, delay = 0, variant = "up" }: RevealProps) {
@@ -31,14 +31,14 @@ export function Reveal({ children, className, delay = 0, variant = "up" }: Revea
       data-reveal={variant}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      {children}
+      {variant === "wipe" ? <div className="reveal-wipe-content">{children}</div> : children}
     </div>
   );
 }
 
 export function SectionTitle({ eyebrow, title, text }: { eyebrow: string; title: ReactNode; text?: string }) {
   return (
-    <Reveal className="mx-auto mb-12 max-w-2xl text-center">
+    <Reveal variant="wipe" className="mx-auto mb-12 max-w-2xl text-center">
       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-primary">{eyebrow}</p>
       <h2 className="text-5xl md:text-6xl">{title}</h2>
       {text && <p className="mt-4 text-muted-foreground">{text}</p>}

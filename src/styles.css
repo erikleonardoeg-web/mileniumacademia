@@ -181,19 +181,29 @@
 @utility reveal {
   --reveal-x: 0px;
   --reveal-y: 28px;
-  --reveal-scale: 0.985;
+  --reveal-scale: 0.99;
   opacity: 0;
-  filter: blur(5px);
+  clip-path: inset(0);
   transform: translate3d(var(--reveal-x), var(--reveal-y), 0) scale(var(--reveal-scale));
-  transition: opacity .85s cubic-bezier(0.22, 1, 0.36, 1), transform .85s cubic-bezier(0.22, 1, 0.36, 1), filter .85s ease;
-  &[data-reveal="left"] { --reveal-x: -36px; --reveal-y: 0px; }
-  &[data-reveal="right"] { --reveal-x: 36px; --reveal-y: 0px; }
+  transition: opacity .8s cubic-bezier(0.22, 1, 0.36, 1), transform .8s cubic-bezier(0.22, 1, 0.36, 1), clip-path .95s cubic-bezier(0.22, 1, 0.36, 1);
+  &[data-reveal="left"] { --reveal-x: -40px; --reveal-y: 0px; --reveal-scale: 1; }
+  &[data-reveal="right"] { --reveal-x: 40px; --reveal-y: 0px; --reveal-scale: 1; }
   &[data-reveal="scale"] { --reveal-y: 12px; --reveal-scale: 0.96; }
-  &.is-visible { opacity: 1; filter: none; transform: translate3d(0, 0, 0) scale(1); }
+  &[data-reveal="wipe"] { --reveal-y: 18px; --reveal-scale: 1; }
+  &[data-reveal="wipe"] > .reveal-wipe-content {
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path .95s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  &.is-visible { opacity: 1; clip-path: inset(0); transform: translate3d(0, 0, 0) scale(1); }
+  &.is-visible[data-reveal="wipe"] > .reveal-wipe-content { clip-path: inset(0); }
+}
+@utility image-reveal {
+  & img { transform: scale(1.045); transition: transform 1.3s cubic-bezier(0.22, 1, 0.36, 1); }
+  &.is-visible img { transform: scale(1); }
 }
 @utility structure-reveal {
   clip-path: inset(0 0 14% 0);
-  transition-property: opacity, transform, filter, clip-path;
+  transition-property: opacity, transform, clip-path;
   transition-duration: 1s;
   & img { transform: scale(1.07); transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1); }
   &.is-visible { clip-path: inset(0); & img { transform: scale(1); } }
@@ -206,10 +216,9 @@
     transition-duration: 0.01ms !important;
     transition-delay: 0ms !important;
   }
-  .reveal, .structure-reveal, .structure-reveal img {
+  .reveal, .reveal-wipe-content, .structure-reveal, .structure-reveal img, .image-reveal img {
     opacity: 1;
     clip-path: none;
-    filter: none;
     transform: none;
   }
 }
