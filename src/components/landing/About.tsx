@@ -1,4 +1,4 @@
-import img from "@/assets/gym-3.jpg";
+import img from "@/assets/sobre-academia-milenium.jpg";
 import { Reveal } from "./Reveal";
 import { WaButton } from "./WaButton";
 
@@ -7,9 +7,8 @@ export function About() {
     <section id="sobre" className="py-24 md:py-32">
       <div className="container mx-auto grid items-center gap-12 px-5 md:grid-cols-2">
         <Reveal className="relative">
-          <img src={img} alt="Imagem ilustrativa de aluna treinando" width={1024} height={768} loading="lazy" className="aspect-[4/5] w-full rounded-sm object-cover" />
+          <img src={img} alt="Fachada da Academia Milenium em Maringá, com entrada de vidro, motos estacionadas e banner de Muay Thai e Jiu-Jitsu" width={1254} height={1254} loading="lazy" className="aspect-square w-full rounded-sm object-cover" />
           <div className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-sm border border-primary/40" />
-          <span className="absolute bottom-3 left-3 rounded-sm bg-background/80 px-2 py-1 text-[10px] uppercase tracking-wider text-muted-foreground">Imagem ilustrativa</span>
         </Reveal>
         <Reveal delay={150}>
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-primary">Sobre nós</p>
