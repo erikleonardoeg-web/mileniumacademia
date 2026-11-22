@@ -50,12 +50,12 @@ export function Contact() {
   return (
     <section id="contato" className="relative overflow-hidden py-24 md:py-32">
       <div className="container mx-auto grid gap-12 px-5 lg:grid-cols-2 lg:items-center">
-        <Reveal>
+        <Reveal variant="left">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-primary">Matrícula</p>
           <h2 className="text-6xl md:text-7xl">Seu melhor <span className="text-gradient-light">começa agora.</span></h2>
           <p className="mt-6 max-w-md text-muted-foreground">Preencha seus dados e continue o atendimento pelo WhatsApp com a equipe da Academia Milenium.</p>
         </Reveal>
-        <Reveal delay={150}>
+        <Reveal variant="right" delay={150}>
           <form onSubmit={submit} noValidate className="space-y-4 rounded-sm border border-border bg-card p-6 md:p-8">
             <div>
               <label htmlFor="nome" className="mb-1 block text-sm">Nome</label>

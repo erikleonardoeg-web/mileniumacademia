@@ -14,10 +14,10 @@ export function Hero() {
         <h1 className="max-w-3xl text-7xl sm:text-8xl lg:text-[9rem] animate-in fade-in slide-in-from-bottom-6 duration-1000">
           Seu melhor <br /><span className="text-gradient-light">está por vir.</span>
         </h1>
-        <p className="mt-6 max-w-md text-lg text-foreground/80 animate-in fade-in duration-1000">
+        <p className="mt-6 max-w-md text-lg text-foreground/80 animate-in fade-in slide-in-from-bottom-4 delay-150 duration-1000 fill-mode-both">
           Dê o primeiro passo hoje. Fale com a equipe da Academia Milenium e descubra o plano ideal para você.
         </p>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-8 flex flex-col gap-3 animate-in fade-in slide-in-from-bottom-4 delay-300 duration-1000 fill-mode-both sm:flex-row">
           <WaButton msg="matricula">Quero me matricular</WaButton>
           <WaButton msg="planos" variant="heroOutline">Consultar planos</WaButton>
         </div>

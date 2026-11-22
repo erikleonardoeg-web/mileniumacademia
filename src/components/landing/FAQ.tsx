@@ -15,7 +15,7 @@ export function FAQ() {
     <section id="faq" className="bg-surface py-24 md:py-32">
       <div className="container mx-auto max-w-3xl px-5">
         <SectionTitle eyebrow="Dúvidas" title={<>Perguntas <span className="text-gradient-light">frequentes</span></>} />
-        <Reveal>
+        <Reveal variant="scale">
           <Accordion type="single" collapsible>
             {faqs.map((f, i) => (
               <AccordionItem key={i} value={`i${i}`}>

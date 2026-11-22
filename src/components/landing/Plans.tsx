@@ -9,7 +9,7 @@ export function Plans() {
     <section id="planos" className="py-24 md:py-32">
       <div className="container mx-auto px-5">
         <SectionTitle eyebrow="Planos" title={<>O plano certo <span className="text-gradient-light">para você</span></>} text="Valores e condições são informados diretamente pela nossa equipe, sempre atualizados." />
-        <Reveal className="mx-auto max-w-3xl rounded-sm border border-primary/40 bg-card p-8 shadow-light md:p-12">
+        <Reveal variant="scale" className="mx-auto max-w-3xl rounded-sm border border-primary/40 bg-card p-8 shadow-light md:p-12">
           <ul className="grid gap-4 sm:grid-cols-2">
             {steps.map((s, i) => (
               <li key={s} className="flex items-start gap-3">

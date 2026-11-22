@@ -12,7 +12,7 @@ export function Modalities() {
         {items.length > 0 ? (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((m, i) => (
-              <Reveal key={m.name} delay={i * 80} className="rounded-sm border border-border bg-card p-8 transition-colors hover:border-primary">
+              <Reveal key={m.name} delay={i * 80} variant="scale" className="rounded-sm border border-border bg-card p-8 hover:border-primary">
                 <Dumbbell className="mb-4 text-primary" />
                 <h3 className="text-3xl">{m.name}</h3>
                 <p className="mt-2 text-muted-foreground">{m.description}</p>

@@ -9,7 +9,7 @@ export function Testimonials() {
         <SectionTitle eyebrow="Depoimentos" title={<>Quem treina, <span className="text-gradient-light">recomenda</span></>} />
         <div className="grid gap-4 md:grid-cols-3">
           {site.testimonials.map((t, i) => (
-            <Reveal key={i} delay={i * 100} className="flex h-full flex-col rounded-sm border border-border bg-card p-8">
+            <Reveal key={i} delay={i * 100} variant="scale" className="flex h-full flex-col rounded-sm border border-border bg-card p-8">
               <Quote className="mb-4 text-primary" />
               <p className="italic text-muted-foreground">“{t.text}”</p>
               <p className="mt-auto pt-6 font-semibold">{t.name}</p>

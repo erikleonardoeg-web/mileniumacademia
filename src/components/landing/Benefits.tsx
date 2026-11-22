@@ -15,7 +15,7 @@ export function Benefits() {
         <SectionTitle eyebrow="Por que a Milenium" title={<>Feita para quem <span className="text-gradient-light">não para</span></>} />
         <div className="grid gap-px overflow-hidden rounded-sm bg-border sm:grid-cols-2 lg:grid-cols-4">
           {items.map((b, i) => (
-            <Reveal key={b.title} delay={i * 100} className="group h-full bg-surface p-8 transition-colors hover:bg-card">
+            <Reveal key={b.title} delay={i * 100} className="group h-full bg-surface p-8 hover:bg-card">
               <b.icon className="mb-6 size-8 text-primary transition-transform group-hover:scale-110" />
               <h3 className="text-3xl">{b.title}</h3>
               <p className="mt-3 text-sm text-muted-foreground">{b.text}</p>
