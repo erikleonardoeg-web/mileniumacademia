@@ -1,19 +1,5 @@
 import structureImg from "@/assets/estrutura-academia-milenium.jpg";
-import equipmentImg from "@/assets/estrutura-academia-milenium-equipamentos.jpg";
 import { Reveal, SectionTitle } from "./Reveal";
-
-const photos = [
-  {
-    src: structureImg,
-    alt: "Área de musculação da Academia Milenium, com equipamentos e iluminação colorida",
-    label: "Área de musculação",
-  },
-  {
-    src: equipmentImg,
-    alt: "Equipamentos de musculação da Academia Milenium vistos de outro ângulo",
-    label: "Equipamentos",
-  },
-];
 
 export function Structure() {
   return (
@@ -23,33 +9,24 @@ export function Structure() {
           eyebrow="Estrutura"
           title={<>Espaço para <span className="text-gradient-light">evoluir</span></>}
         />
-        <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-2">
-          {photos.map((photo, index) => (
-            <Reveal
-              key={photo.label}
-              delay={index * 140}
-              variant={index === 0 ? "left" : "right"}
-              className="structure-reveal"
-            >
-              <figure className="h-full overflow-hidden rounded-sm border border-border bg-card shadow-light">
-                <div className="overflow-hidden">
-                  <img
-                    src={photo.src}
-                    alt={photo.alt}
-                    width={1254}
-                    height={1254}
-                    loading="lazy"
-                    className="aspect-square w-full object-cover"
-                  />
-                </div>
-                <figcaption className="flex items-center justify-between gap-4 border-t border-border px-5 py-4 text-xs uppercase tracking-[0.2em] text-muted-foreground md:px-6">
-                  <span className="font-semibold text-foreground">{photo.label}</span>
-                  <span className="shrink-0">Milenium</span>
-                </figcaption>
-              </figure>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal variant="scale" className="structure-reveal mx-auto max-w-5xl">
+          <figure className="overflow-hidden rounded-sm border border-border bg-card shadow-light">
+            <div className="overflow-hidden">
+              <img
+                src={structureImg}
+                alt="Área de musculação da Academia Milenium, com equipamentos e iluminação colorida"
+                width={1254}
+                height={1254}
+                loading="lazy"
+                className="aspect-square w-full object-cover"
+              />
+            </div>
+            <figcaption className="flex items-center justify-between gap-4 border-t border-border px-5 py-4 text-xs uppercase tracking-[0.2em] text-muted-foreground md:px-7 md:py-5">
+              <span className="font-semibold text-foreground">Área de musculação</span>
+              <span className="shrink-0">Milenium</span>
+            </figcaption>
+          </figure>
+        </Reveal>
       </div>
     </section>
   );
