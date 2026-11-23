@@ -72,6 +72,9 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --color-silver: var(--silver);
   --color-surface: var(--surface);
+  --color-instagram: var(--instagram);
+  --color-facebook: var(--facebook);
+  --color-on-brand: var(--on-brand);
   --font-display: "Bebas Neue", sans-serif;
   --font-sans: "Barlow", sans-serif;
 }
@@ -100,6 +103,10 @@
   --silver: oklch(0.82 0.01 260);
   --surface: oklch(0.18 0.014 260);
   --whatsapp: oklch(0.72 0.17 150);
+  --instagram: oklch(0.58 0.23 350);
+  --facebook: oklch(0.56 0.23 262);
+  --on-brand: oklch(0.99 0 0);
+  --gradient-instagram: linear-gradient(45deg, oklch(0.84 0.14 85) 0%, oklch(0.75 0.19 55) 20%, oklch(0.64 0.23 25) 40%, oklch(0.57 0.23 350) 62%, oklch(0.5 0.22 315) 82%, oklch(0.53 0.22 275) 100%);
   --gradient-light: linear-gradient(135deg, oklch(0.98 0.002 250), oklch(0.78 0.012 260));
   --gradient-fade: linear-gradient(180deg, oklch(0.145 0.012 260 / 0.22), oklch(0.145 0.012 260 / 0.68) 58%, oklch(0.145 0.012 260));
   --gradient-hero: linear-gradient(90deg, oklch(0.145 0.012 260 / 0.95) 0%, oklch(0.145 0.012 260 / 0.88) 35%, oklch(0.145 0.012 260 / 0.55) 55%, oklch(0.145 0.012 260 / 0.15) 80%, oklch(0.145 0.012 260 / 0) 100%), linear-gradient(0deg, oklch(0.145 0.012 260) 0%, oklch(0.145 0.012 260 / 0.92) 20%, oklch(0.145 0.012 260 / 0.70) 42%, oklch(0.145 0.012 260 / 0.35) 62%, oklch(0.145 0.012 260 / 0.10) 80%, oklch(0.145 0.012 260 / 0) 92%);
@@ -178,6 +185,23 @@
 @utility text-gradient-light { background-image: var(--gradient-light); -webkit-background-clip: text; background-clip: text; color: transparent; }
 @utility shadow-light { box-shadow: var(--shadow-light); }
 @utility bg-whatsapp { background-color: var(--whatsapp); }
+@utility bg-instagram-gradient { background-image: var(--gradient-instagram); }
+@utility shadow-instagram { box-shadow: 0 12px 34px -12px oklch(0.57 0.23 350 / 0.55); }
+@utility shadow-facebook { box-shadow: 0 12px 34px -12px oklch(0.56 0.23 262 / 0.55); }
+@utility social-sheen {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, transparent 38%, oklch(1 0 0 / 0.32) 50%, transparent 62%);
+    transform: translateX(-130%);
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+  &:hover::after { transform: translateX(130%); }
+}
 @utility reveal {
   --reveal-x: 0px;
   --reveal-y: 28px;

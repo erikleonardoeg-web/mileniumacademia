@@ -1,5 +1,6 @@
-import { Instagram, MapPin, MessageCircle } from "lucide-react";
+import { MapPin, MessageCircle } from "lucide-react";
 import { site, waMsg } from "@/config/site";
+import { SocialButtons } from "./SocialButtons";
 import logoImg from "@/assets/logo-milenium.png";
 
 export function Footer() {
@@ -23,8 +24,11 @@ export function Footer() {
         </nav>
         <div className="space-y-3 text-sm">
           <a href={waMsg("info")} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary"><MessageCircle className="size-4 text-primary" />{site.whatsappDisplay}</a>
-          <a href={site.instagramUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary"><Instagram className="size-4 text-primary" />@{site.instagram}</a>
           <a href={site.mapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary"><MapPin className="size-4 text-primary" />Ver no Google Maps</a>
+          <div>
+            <p className="mb-2 text-xs uppercase tracking-[0.25em] text-muted-foreground">Siga a Milenium</p>
+            <SocialButtons variant="icon" size="md" />
+          </div>
         </div>
       </div>
       <p className="container mx-auto mt-12 px-5 text-xs text-muted-foreground">© {new Date().getFullYear()} {site.name}. Todos os direitos reservados. Imagens ilustrativas.</p>

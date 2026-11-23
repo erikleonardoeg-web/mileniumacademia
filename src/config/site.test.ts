@@ -11,6 +11,15 @@ describe("WhatsApp links", () => {
   });
 });
 
+describe("Redes sociais", () => {
+  it("aponta para o Instagram e o Facebook oficiais da academia", () => {
+    expect(site.instagramUrl).toBe("https://www.instagram.com/milenium_academia/");
+    expect(site.facebookUrl).toBe("https://www.facebook.com/Milenium.Academia");
+    expect(site.instagram).toBe("milenium_academia");
+    expect(site.facebook).toBe("Milenium.Academia");
+  });
+});
+
 describe("Depoimentos", () => {
   it("traz os depoimentos reais enviados pelo proprietário, sem texto de exemplo", () => {
     expect(site.testimonials).toHaveLength(3);

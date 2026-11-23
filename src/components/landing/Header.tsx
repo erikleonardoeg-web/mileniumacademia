@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { WaButton } from "./WaButton";
+import { SocialButtons } from "./SocialButtons";
 import { cn } from "@/lib/utils";
 import logoImg from "@/assets/logo-milenium.png";
 
@@ -33,6 +34,7 @@ export function Header() {
           {links.map(([l, h]) => <a key={h} href={h} className="text-sm uppercase tracking-wider text-muted-foreground transition-colors hover:text-primary">{l}</a>)}
         </nav>
         <div className="flex items-center gap-2">
+          <SocialButtons variant="icon" size="sm" className="gap-1.5" />
           <WaButton msg="matricula" size="sm" className="hidden h-10 px-5 sm:inline-flex">Matricule-se</WaButton>
           <button className="p-2 lg:hidden" onClick={() => setOpen(!open)} aria-label={open ? "Fechar menu" : "Abrir menu"} aria-expanded={open}>
             {open ? <X /> : <Menu />}

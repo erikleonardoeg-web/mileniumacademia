@@ -7,6 +7,7 @@ import { Modalities } from "@/components/landing/Modalities";
 import { Benefits } from "@/components/landing/Benefits";
 import { Plans } from "@/components/landing/Plans";
 import { Testimonials } from "@/components/landing/Testimonials";
+import { Social } from "@/components/landing/Social";
 import { Location } from "@/components/landing/Location";
 import { FAQ } from "@/components/landing/FAQ";
 import { Contact } from "@/components/landing/Contact";
@@ -36,7 +37,7 @@ export const Route = createFileRoute("/")({
       type: "application/ld+json",
       children: JSON.stringify({
         "@context": "https://schema.org", "@type": "ExerciseGym", name: site.name,
-        telephone: "+55 44 99821-2872", hasMap: site.mapsUrl, sameAs: [site.instagramUrl],
+        telephone: "+55 44 99821-2872", hasMap: site.mapsUrl, sameAs: [site.instagramUrl, site.facebookUrl],
         address: { "@type": "PostalAddress", addressLocality: "Maringá", addressRegion: "PR", addressCountry: "BR" },
       }),
     }],
@@ -50,7 +51,7 @@ function Index() {
       <Header />
       <main>
         <Hero /><About /><Structure /><Modalities /><Benefits /><Plans />
-        <Testimonials /><Location /><FAQ /><Contact />
+        <Testimonials /><Social /><Location /><FAQ /><Contact />
       </main>
       <Footer />
       <FloatingWhatsApp />

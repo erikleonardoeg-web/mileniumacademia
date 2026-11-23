@@ -7,6 +7,8 @@ export const site = {
   whatsappDisplay: "(44) 99821-2872",
   instagram: "milenium_academia",
   instagramUrl: "https://www.instagram.com/milenium_academia/",
+  facebook: "Milenium.Academia",
+  facebookUrl: "https://www.facebook.com/Milenium.Academia",
   mapsUrl: "https://maps.app.goo.gl/KA2E9RESaP6nsziq8",
   mapsEmbed: "https://www.google.com/maps?q=Academia+Milenium+Maring%C3%A1+PR&output=embed",
   messages: {
