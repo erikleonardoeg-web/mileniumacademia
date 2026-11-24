@@ -4,7 +4,6 @@ import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { waLink } from "@/config/site";
 import { Reveal } from "./Reveal";
-import { SocialButtons } from "./SocialButtons";
 
 const goals = ["Emagrecimento", "Ganho de massa muscular", "Condicionamento físico", "Saúde e qualidade de vida", "Outro"];
 const interests = ["Matrícula", "Conhecer os planos", "Agendar uma visita", "Outras informações"];
@@ -86,10 +85,6 @@ export function Contact() {
             </div>
             <Button type="submit" variant="hero" size="xl" className="w-full"><Send />Enviar pelo WhatsApp</Button>
           </form>
-          <div className="mt-6">
-            <p className="mb-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">Ou entre direto nas nossas redes</p>
-            <SocialButtons variant="solid" size="sm" />
-          </div>
         </Reveal>
       </div>
     </section>
