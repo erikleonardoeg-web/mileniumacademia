@@ -31,7 +31,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <p className="container mx-auto mt-12 px-5 text-xs text-muted-foreground">© {new Date().getFullYear()} {site.name}. Todos os direitos reservados. Imagens ilustrativas.</p>
+      <p className="container mx-auto mt-12 px-5 text-xs text-muted-foreground">© {new Date().getFullYear()} {site.name}. Todos os direitos reservados.</p>
     </footer>
   );
 }

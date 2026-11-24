@@ -51,7 +51,7 @@ function Index() {
       <Header />
       <main>
         <Hero /><About /><Structure /><Modalities /><Benefits /><Plans />
-        <Testimonials /><Social /><Location /><FAQ /><Contact />
+        <Testimonials /><Location /><FAQ /><Contact /><Social />
       </main>
       <Footer />
       <FloatingWhatsApp />
